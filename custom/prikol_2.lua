@@ -1,10 +1,8 @@
 local dfpwm = require("cc.audio.dfpwm")
 local speaker = peripheral.find("speaker")
-local dance = require("dance")
 
 
 while true do
-    dance()
     local decoder = dfpwm.make_decoder()
     for chunk in io.lines("/songs/LHwYvRm2.wav", 16 * 1024) do
         local buffer = decoder(chunk)
